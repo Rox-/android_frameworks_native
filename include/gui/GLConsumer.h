@@ -292,7 +292,7 @@ private:
 
 #ifdef STE_HARDWARE
     // converts buffer to a suitable color format
-    status_t convert(sp<GraphicBuffer> &srcBuf, sp<GraphicBuffer &dstBuf);
+    status_t convert(sp<GraphicBuffer> &srcBuf, sp<GraphicBuffer> &dstBuf);
 #endif
 
     // freeBufferLocked frees up the given buffer slot.  If the slot has been
