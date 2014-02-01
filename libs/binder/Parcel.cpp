@@ -808,10 +808,12 @@ status_t Parcel::writeBlob(size_t len, WritableBlob* outBlob)
     return status;
 }
 
+#ifdef STE_HARDWARE
 status_t Parcel::write(const Flattenable& val) {
     const FlattenableHelper helper(val);
     return write(helper);
 }
+#endif
 
 status_t Parcel::write(const FlattenableHelperInterface& val)
 {
@@ -1189,10 +1191,12 @@ status_t Parcel::readBlob(size_t len, ReadableBlob* outBlob) const
     return NO_ERROR;
 }
 
+#ifdef STE_HARDWARE
 status_t Parcel::read(Flattenable& val) const {
     FlattenableHelper helper(val);
     return read(helper);
 }
+#endif
 
 status_t Parcel::read(FlattenableHelperInterface& val) const
 {
